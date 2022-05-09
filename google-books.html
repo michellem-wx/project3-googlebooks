@@ -8,5 +8,56 @@
         <link rel="stylesheet" href="index.css" />
         <script src="google-books.js"></script>
     </head>
-    <body></body>
+    <body>
+        <!-- Header -->
+        <header>
+            <h1>Google Books</h1>
+        </header>
+
+        <!-- Input and Search button -->
+        <div class="search">
+            <input
+                class="search__input"
+                id="search_input"
+                type="text"
+                placeholder="Start your search here..."
+            />
+            <input
+                class="search__button"
+                id="search_button"
+                type="button"
+                value="Search"
+            />
+        </div>
+
+        <!-- Grid 4x3 to display books -->
+
+        <!-- parent -->
+        <div class="grid">
+                <!-- Row 1 -->
+                <div class="grid__books" id="grid-1">
+                  <img></img>
+                  <p id="title">Title</p>
+                  <p id="author">Author</p>
+                  <p id="description">Description</p>
+                </div>
+                <div class="grid__books" id="grid-2">Book 2</div>
+                <div class="grid__books" id="grid-3">Book 3</div>
+                <div class="grid__books" id="grid-4">Book 4</div>
+
+                <!-- Row 2 -->
+                <div class="grid__books" id="grid-5">Book 5</div>
+                <div class="grid__books" id="grid-6">Book 6</div>
+                <div class="grid__books" id="grid-7">Book 7</div>
+                <div class="grid__books" id="grid-8">Book 8</div>
+
+                <!-- Row 3 -->
+
+                <div class="grid__books" id="grid-9">Book 9</div>
+                <div class="grid__books" id="grid-10">Book 10</div>
+                <div class="grid__books" id="grid-11">Book 11</div>
+                <div class="grid__books" id="grid-12">Book 12</div>
+            </div>
+        </div>
+    </body>
 </html>
