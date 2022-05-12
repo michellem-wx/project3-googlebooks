@@ -46,21 +46,48 @@ const getGoogleApi = async (searchQuery) => {
             output.bookAuthors = "Author(s) unknown";
         }
 
+        //https://www.codegrepper.com/code-examples/javascript/how+to+limit+words+in+javascript
+
         // BOOK DESCRIPTION
         if (x.volumeInfo.description) {
-            output.bookDescription = x.volumeInfo.description;
+            let truncate = (str, max, suffix) =>
+                str.length < max
+                    ? str
+                    : `${str.substr(
+                          0,
+                          str.substr(0, max - suffix.length).lastIndexOf(" ")
+                      )}${suffix}`;
+
+            output.bookDescription = truncate(
+                x.volumeInfo.description,
+                300,
+                "..."
+            );
+
+            // output.bookDescription = x.volumeInfo.description;
+
+            // output.bookDescription = x.volumeInfo.description
+            //     .split(" ")
+            //     .splice(0, 3)
+            //     .join(" ");
         } else {
             output.bookDescription = "Book description unavailable";
         }
 
         // IMAGE LINKS
+        // if (x.volumeInfo.imageLinks) {
+        //     output.bookImage = x.volumeInfo.imageLinks;
+        // } else {
+        //     output.bookImage = "Image thumbnail is NOT available";
+        // }
+
         if (x.volumeInfo.imageLinks) {
             output.bookImage = x.volumeInfo.imageLinks;
         } else {
             output.bookImage = "Image thumbnail is NOT available";
         }
 
-        console.log(output); //the object i created
+        // console.log(output); //the object i created
 
         return output;
     });
