@@ -19,11 +19,17 @@ const getGoogleApi = async (searchQuery) => {
         // creating an object for each book
         // bookFrom API - represents one book from the array ==> accesing volume info (that's also an object)
 
-        // TITLE
+        // // TITLE
+        // if (x.volumeInfo.title) {
+        //     output.title = x.volumeInfo.title;
+        // } else {
+        //     output.title = "Book title unavailable";
+        // }
+
         if (x.volumeInfo.title) {
-            output.title = x.volumeInfo.title;
+            output.bookTitle = x.volumeInfo.title;
         } else {
-            output.title = "Book title unavailable";
+            output.bookTitle = "Book title unavailable";
         }
 
         // Q.1 what is output.:
