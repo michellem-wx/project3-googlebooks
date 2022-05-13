@@ -8,8 +8,6 @@ const getSearchUrl = (searchTerm) => {
 
 // FUNCTION: Getting data from the API
 const getGoogleApi = async (searchQuery) => {
-    // clearResults();
-
     const requestPromise = fetch(getSearchUrl(searchQuery));
     const response = await requestPromise;
     const searchData = await response.json();
@@ -60,7 +58,7 @@ const getGoogleApi = async (searchQuery) => {
 
         return output;
     });
-    renderBooks(bookData); //calling the function from modules
+    renderBooks(bookData);
 };
 
 // FUNCTION: Listener event on search button
@@ -77,7 +75,3 @@ searchButton.addEventListener("click", () => {
 
     getGoogleApi(searchInput.value);
 });
-
-// parent is the DIV holding children
-// firstChild is a property from JS DOM - will give you the first element nested inside it (i.e DIV of the very first book cell)
-// while the value is TRUTHY --> the loop is happening until NO children is left and the DIV becomes empty
