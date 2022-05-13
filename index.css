@@ -1,7 +1,7 @@
 header h1 {
   display: flex;
   justify-content: center;
-  font-size: 80px;
+  font-size: 70px;
   font-family: "Trebuchet MS";
 }
 
@@ -21,31 +21,29 @@ header h1 {
   display: grid;
   justify-content: center;
   padding: 30px;
-  grid-gap: 10px;
+  grid-gap: 40px;
   grid-template-columns: repeat(3, 300px);
   grid-template-rows: repeat(3, 500px);
-}
-.grid__books {
   font-family: arial;
-  padding: 20px;
-  align-items: baseline;
+  padding: 50px;
 }
-.grid__books img {
+.grid img {
   display: block;
   width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
-.grid__books h4 {
+.grid h4 {
   font-weight: bold;
 }
-.grid__books h5 {
+.grid h5 {
   font-style: italic;
   text-align: right;
 }
-.grid__books p {
+.grid p {
   text-align: justify;
   font-size: small;
+  line-height: 1.5;
 }
 
 @media only screen and (max-width: 576px) {
